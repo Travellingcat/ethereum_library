@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dapp</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    </head>
+    <body>
+        
+          <div style="background-color: #E8E8FC; position: absolute; left: 0px; top: 0px; height: 9%; width: 100%; border-bottom: solid 1px whitesmoke;">
+            <img src="/images/eth-home-icon.png" style="position: absolute; left: 30px; top: 12px;"/>
+            <div style="position: absolute; left: 80px; top: 12px; width: 50%; height: 100%; font-size: 22px;">欢迎来到以太坊图书管理系统！</div>
+            <div style="position: absolute; left: 1300px; top: 16px; width: 10%; height: 100%; font-size: 16px;">当前登录：<%= current_user %></div>
+          </div>
+            
+          <div class="container" style="background-color: #E8E8FC; position: absolute; left: 0px; top: 9%; height: 100%; width: 10%;">
+            <nav class="nav">
+                <a class="nav-link active" href="/users" style="border-bottom: solid 1px whitesmoke;">查询书籍</a>
+                <a class="nav-link" href="/users/borrow" style="border-bottom: solid 1px whitesmoke;">借阅书籍</a>
+                <a class="nav-link" href="/users/records" style="border-bottom: solid 1px whitesmoke;">借阅记录</a>
+                <a class="nav-link" href="/users/return" style="border-bottom: solid 1px whitesmoke;">归还书籍</a>
+                
+              </nav>
+          </div>
+
+
+          <div style="position: absolute; top: 30%; left: 40%;">
+            <form class="form-inline" action="/users/borrow" method="post">
+              <div>书籍编号:</div>
+              <div class="form-group mx-sm-3 mb-2">
+                
+                <input class="form-control" id="borrowbookid" name="borrowbookid">
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">确认借阅</button>
+            </form>
+          </div>
+
+          
+
+
+          <div style="position: absolute; top: 70%; right: 5%; height: 25%; width: 18%;">
+            <img src="/images/eth_dog.png" style="height: 100%; width: 100%;"/>
+          </div>
+        
+    </body>
+</html>
